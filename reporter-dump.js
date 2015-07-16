@@ -8,34 +8,35 @@
         return {status: 2, msg: 'Ready'};
     };
     
-    // Slice 
+    // Slicing
     ext.slice = function(input, first, second) {
         return input.slice(first, second); 
     }; 
     
-    // Reverse
-    ext.reverse = function(input) {
-        return input.reverse();
-    };
-    
-    // Upper
-    ext.upper = function(input) {
-        return input.toUpperCase();
-    };
-    
-    // Lower
-    ext.lower = function(input) {
-        return input.toLowerCase();
+    // Transform
+    ext.transform = function(input, menu) {
+        if (menu === "reverse") {
+            return input.reverse();
+        } 
+        else if (menu === "uppercase") {
+            return input.toUpperCase();
+        } 
+        else if (menu === "lowercase") {
+            return input.toLowerCase();
+        } else {
+            return "Error; Invalid input.";
+        }
     }
-    
+    ;
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-          ['r', 'slice of %s from %n to %n', 'slice', 'hello', 1, 5],
-          ['r', 'reverse %s', 'reverse', 'rotator'],
-          ['r' 'upper %s', 'upper', 'sCrAtCh'],
-          ['r' 'lower %s', 'lower', 'ScRaTcH']
-        ]
+          ['r', 'slice of %s from %n to %n', 'slice', 'hello', 1, 5], 
+          ['r', 'transform %s by %m.transform', 'transform', 'Imagine, Program, Share', 'reverse'],
+        ],
+        menus: {
+            transform: ['reverse', 'uppercase', 'lowercase']
+        }
     };
 
     // Register the extension

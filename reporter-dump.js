@@ -14,9 +14,9 @@
     }; 
     
     // Transform
-    ext.transform = function(input, menu) {
-        if (menu === "reversed") {
-            return input.reverse();
+    ext.transform = function(menu, input) {
+        if (menu === "reverse") {
+            return input.split("").reverse().join("");
         } 
         else if (menu === "uppercase") {
             return input.toUpperCase();
@@ -32,7 +32,7 @@
     var descriptor = {
         blocks: [
           ['r', 'slice of %s from %n to %n', 'slice', 'hello', 1, 5], 
-          ['r', 'transform %s into %m.transform', 'transform', 'Imagine, Program, Share', 'reversed']
+          ['r', '%m.transform of %s', 'transform', 'reverse', 'Share Your Programmable Imagination']
         ],
         menus: {
             transform: ['reverse', 'uppercase', 'lowercase']

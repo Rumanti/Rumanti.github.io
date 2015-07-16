@@ -32,9 +32,9 @@
     var descriptor = {
         blocks: [
           ['r', 'slice of %s from %n to %n', 'slice', 'hello', 1, 5],
-          ['r', 'reverse %s' 'reverse' 'rotator'],
-          ['r' 'upper %s' 'upper' 'sCrAtCh'],
-          ['r' 'lower %s' 'lower' 'ScRaTcH']
+          ['r', 'reverse %s', 'reverse', 'rotator'],
+          ['r' 'upper %s', 'upper', 'sCrAtCh'],
+          ['r' 'lower %s', 'lower', 'ScRaTcH']
         ]
     };
 

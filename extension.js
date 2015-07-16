@@ -10,13 +10,13 @@
     
     // Slice block
     ext.slice = function(input, first, second) {
-        return input[first:second];
-    }
-
+        return input.slice(first,second); 
+    }; 
+    
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-          ['r', 'slice of %s from %n to %n', slice, 'hello', 1, 5]
+          ['r', 'slice of %s from %n to %n', 'slice', 'hello', 1, 5] 
         ]
     };
 

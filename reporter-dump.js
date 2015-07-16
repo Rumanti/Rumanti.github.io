@@ -15,7 +15,7 @@
     
     // Transform
     ext.transform = function(input, menu) {
-        if (menu === "reverse") {
+        if (menu === "reversed") {
             return input.reverse();
         } 
         else if (menu === "uppercase") {
@@ -32,7 +32,7 @@
     var descriptor = {
         blocks: [
           ['r', 'slice of %s from %n to %n', 'slice', 'hello', 1, 5], 
-          ['r', 'transform %s by %m.transform', 'transform', 'Imagine, Program, Share', 'reverse']
+          ['r', 'transform %s into %m.transform', 'transform', 'Imagine, Program, Share', 'reversed']
         ],
         menus: {
             transform: ['reverse', 'uppercase', 'lowercase']

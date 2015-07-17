@@ -39,7 +39,7 @@ function (ext) {
     var descriptor = {
         blocks: [
           ['r', 'slice of %s from %n to %n', 'slice', 'a cake', 2, 6], 
-          ['r', '%m.transform of %s', 'transform', 'reverse', 'Share Your Programmable Imagination'],
+          ['r', '%m.transform of %s', 'transform', 'reverse', 'draw ward'],
           ['r', 'shuffle %s', 'shuffle', 'strings']
         ],
         menus: {

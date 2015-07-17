@@ -44,9 +44,10 @@
         ],
         menus: {
             transform: ['reverse', 'uppercase', 'lowercase']
-        }
+        },
+        url: "https://github.com/Rumanti/Rumanti.github.io/blob/master/reporter-dump.js"
     };
 
     // Register the extension
-    ScratchExtensions.register('Stringy Shortcuts', descriptor, ext);
+    ScratchExtensions.register('Strintory', descriptor, ext);
 })({});

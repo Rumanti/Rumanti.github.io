@@ -1,9 +1,104 @@
 <!DOCTYPE HTML>
 <html>
+
+
+
+
 <head>
-    <title>Under Contruction Undefinitely</title>
+    <title>
+        Rumanti.github.io
+    </title>
+    <meta charset="utf-8"/>
+    <style>
+        body {
+            background-color:#fff;
+        }
+        #top {
+            position:absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+        }
+        #top h1 {
+            font-size:7em;
+            text-align:center;
+            padding-top:60px;
+            font-family:"Roboto Light";
+            color:#fff;
+            text-shadow:0 0 3px rgba(0,0,0,0.5);
+        }
+        #bottom {
+            position:absolute;
+            left:0;
+            right:0;
+            top:102%;
+            bottom:-98%;
+            background-color:rgba(255,255,255,0.3);
+            padding-top:10px;
+            font-size:1.2em;
+        }
+        #bottom ul {
+            list-style-type:none;
+        }
+        
+        .left-pane {
+            margin-left:10%;
+            width:40%;
+            float:left;
+        }
+        .right-pane {
+            margin-right:10%;
+            width:40%;
+            float:right;
+        }
+        a {
+            color:#000;
+            text-decoration:underline;
+        }
+        a:hover {
+            color:#fff;
+            text-shadow:0 0 3px rgba(0,0,0,0.5);
+            cursor:pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>3.1415926 Error - Under Contruction Undefinitely</h1>
+    <div id="top">
+        <h1>rumanti</h1>
+    </div>
+    <div id="bottom">
+        <div class="left-pane" style="margin-bottom:30px;">
+            <p>Hello! This is my GitHub Page, <i>aandd</i>.. I experiment here. This thing is not done yet, and I don't promise it would be done one day. Go check out <a href="http://rumanti.cf">Rumanti.cf</a>, my also-work-in-progress main site :P</p>
+        </div>
+        <div class="right-pane" style="margin-bottom:30px;">
+            
+        </div>
+        <br>
+        <div class="left-pane">
+            
+        </div>
+        <div class="right-pane">
+            
+        </div>
+    </div>
 </body>
+
+
+<script>
+    bodey = document.querySelector("body");
+    var ranC = Math.round(Math.random() * 4);
+    console.log(ranC);
+    if (ranC == 0){
+        bodey.style.backgroundColor = "#ADD8C7";
+    } else if (ranC == 1){
+        bodey.style.backgroundColor = "#FBA93C";
+    } else if (ranC == 2){
+        bodey.style.backgroundColor = "#AACD3D";
+    } else if (ranC == 3){
+        bodey.style.backgroundColor = "#BFA4C8";
+    } else {
+        bodey.style.backgroundColor = "#F785A7";
+    }
+</script>
 </html>

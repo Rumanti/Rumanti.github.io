@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>HTML5 Truth Tables</title>
+        <meta charset="utf-8"/>
+        <style>
+            @import url(http://fonts.googleapis.com/css?family=Raleway);
+            
+            body { font-family:Raleway; }
+            
+            .full-pane {
+                position:absolute;
+                left:0;
+                right:0;
+                height:300px;
+            }
+            
+            .button {
+                font-size:30px;
+                width:100px;
+                padding:10px;
+                border-radius:5px;
+                text-align:center;
+                display:inline-block;
+                margin-left:10px;
+                margin-right:10px;
+            }
+            
+            .button:hover {
+                box-shadow:0 0 20px #fff;
+                cursor:pointer;
+            }
+            
+            #pane-1 {
+                background-color:#4F5858;
+                top:0;
+            }
+            
+            #pane-1 h1 {
+                font-family:Raleway, Sans;
+                font-size:80px;
+                color:#ccc;
+                text-shadow:1px -1px 0px #000, -1px 1px 0 #fff;
+                text-align:center;
+                margin-top:90px;
+            }
+            
+            #pane-2 {
+                background-color:#76C0B1;
+                top:300px;
+            }
+            
+            #pane-2 p {
+                font-size:40px;
+                text-align:center;
+                margin-top:60px;
+                color:#222;
+            }
+            
+            #pane-3 {
+                background-color:#788383;
+                top:600px;
+            }
+            
+            #pane-3 p {
+                font-size:60px;
+                text-align:center;
+                margin-top:90px;
+                color:#eef;
+            }
+            
+            #main-pane {
+                position:absolute;
+                top:900px;
+                height:100%;
+                left:0;
+                right:0;
+                background-color:#4F5858;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="full-pane" id="pane-1">
+            <h1>
+                Truth Tables
+            </h1>
+        </div>
+        <div class="full-pane" id="pane-2">
+            <p>Now, which theme would you like to use?</p>
+            <center>
+                <div class="button" id="dark-theme-button" style="background-color:#333;color:#fff;">Dark</div>
+                <div class="button" id="light-theme-button" style="background-color:#eef;color:#333;">Light</div>
+            </center>
+        </div>
+        <div class="full-pane" id="pane-3">
+            <p>Are you ready?</p>
+        </div>
+        <div id="main-pane">
+        </div>
+        
+        
+        
+        
+        <script>
+            var theme = 0;
+            
+            var darkButton = document.getElementById("dark-theme-button");
+            var darkButtonClick = function() {
+                theme = 0;
+                changeTheme();
+            }
+            darkButton.addEventListener("click", darkButtonClick);
+            
+            var lightButton = document.getElementById("light-theme-button");
+            var lightButtonClick = function() {
+                theme = 1;
+                changeTheme();
+            }
+            lightButton.addEventListener("click", lightButtonClick);
+            
+            var mainPane = document.getElementById("main-pane");
+            
+            var changeTheme = function(){
+                if (theme == 0) {
+                    mainPane.style.backgroundColor = "#4F5858";
+                } else if (theme == 1){
+                    mainPane.style.backgroundColor = "#ddd";
+                } else {
+            }
+            };
+        </script>
+    </body>
+</html>

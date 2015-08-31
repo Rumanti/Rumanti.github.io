@@ -1,5 +1,10 @@
-// Strinstory.js - Strings story - My first Scratch extension :)
-// Shuffle, reverse, or transform your strings into upper/lower cases!
+/*
+Strintory - A ScratchX Experimental Extension dedicated to strings.
+Features: Slicing, reversing, transforming into uppercases/lowercases, shuffling.
+
+Try it on ScratchX:
+http://scratchx.org/?url=http://rumanti.github.io/strintory.js
+*/
 
 (function (ext) {
     // Cleanup function when the extension is unloaded
@@ -48,7 +53,7 @@
         menus: {
             transform: ['reverse', 'uppercase', 'lowercase']
         },
-        url: "https://github.com/Rumanti/Rumanti.github.io/blob/master/reporter-dump.js"
+        url: "https://github.com/Rumanti/Rumanti.github.io/blob/master/strintory.js"
     };
 
     // Register the extension

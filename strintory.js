@@ -1,6 +1,6 @@
 /*
 Strintory - A ScratchX Experimental Extension dedicated to strings.
-Features: Slicing, reversing, transforming into uppercases/lowercases, shuffling.
+Features: Slicing, reversing, transforming into uppercases/lowercases, shuffling, trimming.
 
 Try it on ScratchX:
 http://scratchx.org/?url=http://rumanti.github.io/strintory.js
@@ -20,6 +20,11 @@ http://scratchx.org/?url=http://rumanti.github.io/strintory.js
     ext.slice = function(input, first, second) {
         return input.slice(first, second); 
     }; 
+    
+    // Trimming
+    ext.trim = function(input) {
+        return input.trim();
+    }
     
     // Transform
     ext.transform = function(menu, input) {
@@ -48,7 +53,8 @@ http://scratchx.org/?url=http://rumanti.github.io/strintory.js
         blocks: [
           ['r', 'slice of %s from %n to %n', 'slice', 'a cake', 2, 6], 
           ['r', '%m.transform of %s', 'transform', 'reverse', 'draw ward'],
-          ['r', 'shuffle %s', 'shuffle', 'strings']
+          ['r', 'shuffle %s', 'shuffle', 'strings'],
+          ['r', 'trim %s', 'trim', '     ahhh       ']
         ],
         menus: {
             transform: ['reverse', 'uppercase', 'lowercase']

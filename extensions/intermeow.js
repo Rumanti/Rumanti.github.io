@@ -22,7 +22,7 @@ http://scratchx.org/?url=http://rumanti.github.io/extensions/intermeow.js
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-            [' ', '%m.follow %s', 'follow', 'username']
+            [' ', '%m.follow %s', 'follow', 'follow', 'username']
         ],
         menus: {
             follow: ['follow', 'unfollow'];

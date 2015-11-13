@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Clickbait Title Generator [JS]</title>
+        <meta charset="utf-8"/>
+        <style>
+			body { background-color:darkslategrey; }
+			#content {
+				color:#fff;
+				width:70%;
+				margin:auto;
+				margin-top:10%;
+				font-size:1.5em;
+				font-family:sans-serif;
+				font-weight:200;
+				text-shadow:0 0 10px #000, 0 0 20px #000;
+			}
+		</style>
+    </head>
+    <body>
+		<div id="content"></div>
+    </body>
+    <script type="text/javascript">
+		
+        
+        function randomNum(min, max) {
+			return Math.floor(Math.random() * (max - min)) + min;
+        };
+		
+		function cb_getUser(pos) {
+			return cb_user[pos][ randomNum(0, cb_user[pos].length) ];
+		};
+		
+		
+		
+		
+		
+		
+        var cb_user = [
+            // Cool people/stuff
+            ["Scratch Team", "Scratch Team member", "Moderator", "Moderators", "Developer", "Developers", "Evil cats", "Evil cat", "New Scratcher", "New Scratchers", "total newbie n00b", "totally newbies n00bz", "Cake", "Tera", "Gobo", "Scratch Cat", "Giga", "Pico", "Nano", "Neigh Pony", "Kaj", "Pudding", "Hax0rz", "Hacker", "Santa Claus", "ATer", "bunch of ATers", "l33t hax0r", "team 'o l33t hax0rz", "potato", "loads of potatoez"]
+        ];
+		
+		
+		
+		var cb_phrases = [
+            // 0 Big numbers
+            [randomNum(1000, 10000), "10000000000", "4242424242", "4200000000", "1337", "13371337", "hundred", "million", "billion", "trillion", "404 error", "418 I'm a teapot"],
+            // 1 Dazzles
+            ["OH MY GOODNESS", "OMG", "Amazing", "Unbelievable", "Revolutionary", "WTH", "WHAT THE HECK", "BUSTED", "Revealed", "Leaked", "TOP SECRET", "100% LEGIT", "It's going to take over the world", "GONNA TAKE OVER THE WORLD", "Dazzling", "TRU", "True", "Breakthrough", "YEEEESSSS", "NOOOOO", "TOP NEWS", "Super", "Awesome", "Miracle", "READ!!! ---->", "FIND OUT!!! ----->", "BREAKING NEWS", "Surprising", "Unexpected", "WOW!"],
+            // 2 Spam stuff
+            ["!", "?", "!!!", "???", "!!!!!!!", "??????", "!??!?!!?!1", "!eleven!11!11!one!!1", "/??//??/???/?/???", "......", "...,..,.", "...adkfgbaslf4iu7ila..."],
+			// 3 Positive adjectives
+			["Certified", "Professional", "Tested", "Educated", "Expert", "Experienced", "Famous", "Impressive", "Marvelous", "Glorious", "Big", "Great"],
+			// 4 Offtopic additions 
+			["With pictures!", "With screenshots!", "With tips from "+cb_getUser(0)+"!", "Directly from "+cb_getUser(0), ">>>CLICK HERE<<<", ">>>READ NOW<<<", +randomNum(0, 1000000)+"% FREE FOR LIFETIME", "PL0X!!!" ],
+            // 5 Offtopic NEWS
+            [["Comic Sans", "Papyrus"][randomNum(0, 2)]+" now officially ILLEGAL", ["Python 2.7", "Python 3.4", "Branflakes", "Whitespace", "Malbolge"][randomNum(0,5)]+" is the best programming language in the world, President says", "The new Malbolge test every programmer has to pass", "Scratch is BANNED in "+randomNum(100, 150)+" countries!", "DOGE PROCLAIMED NATIONAL SYMBOL", "ILLUMINATI IS ARRESTED BY NSA", "Homework is now forbidden",
+			 cb_getUser(0)+" bans "+randomNum(0, 100000000000)+" users", 
+			 cb_getUser(0)+" is illuminati"],
+			// 6 Actions
+			["banned", "blocked", "unbanned", "unblocked", "got followed by", "got loved by", "got favourited by", "got promoted by", "advertised", "danced with", "sang because of", "sacrificed their cake because of", "lost all their money because of", " competed in the Olympic Games 2012 thanks to ", " sneaked like a Trojan after being told by ", " announced the end of the world for the ", " escaped from dangerous accidents after remembering "]
+        ];
+		
+		
+		
+		function cb_getPhrase(pos) {
+			return cb_phrases[pos][ randomNum(0, cb_phrases[pos].length) ];
+		};
+		
+
+			
+		var cb_formats = [
+			cb_getPhrase(5)+cb_getPhrase(2)+" "+cb_getPhrase(1)+cb_getPhrase(2)+" "+cb_getPhrase(3)+" "+cb_getUser(0)+" "+cb_getPhrase(6)+" "+cb_getPhrase(0)+[" mysterious unknown events ", " dangerous cyber attacks ", " declarations of war from "+cb_getUser(0), " chocolate candies ", " malwares/virus/potatoes "][randomNum(0, 5)]+cb_getPhrase(2)+" "+cb_getPhrase(4)
+		];
+        
+		
+		
+		var contentEl = document.getElementById("content");
+		contentEl.textContent = cb_formats[randomNum(0, cb_formats.length)];
+		
+    </script>
+</html>
